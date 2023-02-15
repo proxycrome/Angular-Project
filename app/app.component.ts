@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
 import { TutorialsComponent } from './tutorials.component';
 
-@Component({
-  selector: 'my-app',
-  template: `<h1>Hello World from Victor</h1>
-             <h4>Header 4 from App Component</h4>
-             <my-tutorials></my-tutorials>`,
-  styles: [`h4 {
-    color: blue;
-  }`],
-  directives: [TutorialsComponent]
-})
+// @Component({
+//   selector: 'my-app',
+//   template: `<h1>Hello World from Victor</h1>
+//              <h4>Header 4 from App Component</h4>
+//              <my-tutorials></my-tutorials>`,
+//   styles: [`h4 {
+//     color: blue;
+//   }`],
+//   directives: [TutorialsComponent]
+// })
 
 // @Component({
 //   selector: 'my-app',
@@ -23,5 +23,12 @@ import { TutorialsComponent } from './tutorials.component';
 //              <my-tutorials (childEvent)="childValue=$event" [parentData]="pData.value"></my-tutorials>`,
 //   directives: [TutorialsComponent]
 // })
+
+@Component({
+  selector: 'my-app',
+  template: `<h1>Hello World from Victor</h1>
+             <my-tutorials></my-tutorials>`,
+  directives: [TutorialsComponent]
+})
 
 export class AppComponent { }

@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var core_2 = require("@angular/core");
 // Atributes and properties, Classes and styles, and click handlers
 // @Component({
 //     selector: 'my-tutorials',
@@ -96,23 +95,41 @@ var core_2 = require("@angular/core");
 //         this.ctwo = !this.ctwo;
 //     }
 // }
+// @Component({
+//     selector: 'my-tutorials',
+//     template: `<h2>Child Tutorial Component</h2>
+//                 <label>Enter child TuttorialComponent Value</label>
+//                 <input type="text" #childText (keyup)="onChange(childText.value)">
+//                 <p>Value from Parent Component is</p>
+//                 {{parentData}}`,
+//     inputs: ["parentData"],
+//     outputs: ["childEvent"]
+// })
+// export class TutorialsComponent{
+//     public parentData: string
+//     childEvent = new EventEmitter<string>();
+//     onChange(value: string){
+//         this.childEvent.emit(value);
+//     }
+// }
 var TutorialsComponent = (function () {
     function TutorialsComponent() {
-        this.childEvent = new core_2.EventEmitter();
+        this.name = "The Batman";
+        this.date = new Date();
     }
-    TutorialsComponent.prototype.onChange = function (value) {
-        this.childEvent.emit(value);
-    };
     TutorialsComponent = __decorate([
         core_1.Component({
             selector: 'my-tutorials',
-            template: "<h2>Child Tutorial Component</h2>\n                <label>Enter child TuttorialComponent Value</label>\n                <input type=\"text\" #childText (keyup)=\"onChange(childText.value)\">\n                <p>Value from Parent Component is</p>\n                {{parentData}}",
-            inputs: ["parentData"],
-            outputs: ["childEvent"]
+            template: "<h2>{{name}}</h2>\n                <h2>{{name | uppercase}}</h2>\n                <h2>{{name | lowercase}}</h2>\n                <h2>{{name | slice:'4':'7' | uppercase}}</h2>\n                <h2>{{name | replace: 'The' : 'Hello'}}</h2>\n                <h2>{{8.567 | number:'1.2-3'}}</h2>\n                <h2>{{8.567 | number:'2.2-3'}}</h2>\n                <h2>{{8.567 | number:'2.4-4'}}</h2>\n                <h2>{{8.567 | number:'2.2-2'}}</h2>\n                <h2>{{8.9986 | currency:'GBP':true}}</h2>\n                <h2>{{date}}</h2>\n                <h2>{{date | date: 'fullDate'}}</h2>\n                <h2>{{date | date: 'shortDate'}}</h2>\n                <h2>{{date | date: 'shortTime'}}</h2>",
         }), 
         __metadata('design:paramtypes', [])
     ], TutorialsComponent);
     return TutorialsComponent;
 }());
 exports.TutorialsComponent = TutorialsComponent;
+// @Component({
+//     selector: 'my-tutorials',
+//     template: `<h2>{{8.567}}</h2>`,
+// })
+// export class TutorialsComponent{ } 
 //# sourceMappingURL=tutorials.component.js.map

@@ -10,14 +10,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var tutorials_component_1 = require('./tutorials.component');
+// @Component({
+//   selector: 'my-app',
+//   template: `<h1>Hello World from Victor</h1>
+//              <h4>Header 4 from App Component</h4>
+//              <my-tutorials></my-tutorials>`,
+//   styles: [`h4 {
+//     color: blue;
+//   }`],
+//   directives: [TutorialsComponent]
+// })
+// @Component({
+//   selector: 'my-app',
+//   template: `<h1>Hello World</h1>
+//              <h4>Parent App Component</h4>
+//              <label>Enter Parent AppComponent Value</label>
+//              <input type="text" #pData (keyup)="0">
+//              <p>Value for Child TutorialConponent is</p>
+//              {{childValue}}
+//              <my-tutorials (childEvent)="childValue=$event" [parentData]="pData.value"></my-tutorials>`,
+//   directives: [TutorialsComponent]
+// })
 var AppComponent = (function () {
     function AppComponent() {
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "<h1>Hello World from Victor</h1>\n             <h4>Header 4 from App Component</h4>\n             <my-tutorials></my-tutorials>",
-            styles: ["h4 {\n    color: blue;\n  }"],
+            template: "<h1>Hello World from Victor</h1>\n             <my-tutorials></my-tutorials>",
             directives: [tutorials_component_1.TutorialsComponent]
         }), 
         __metadata('design:paramtypes', [])
